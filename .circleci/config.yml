@@ -96,7 +96,7 @@ jobs:
             docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$IMAGE_NAME:$IMAGE_TAG
       - run:
           name: Notify Ntfy.sh
-          command: curl -d "Job completed successfully! Image pushed to $AWS_ECR_ACCOUNT_URL/$IMAGE_NAME:$IMAGE_TAG" ntfy.sh/pico
+          command: curl -d "Job completed successfully! Image pushed to $AWS_ECR_ACCOUNT_URL/$IMAGE_NAME:$IMAGE_TAG" ntfy.sh/trpipeline
       - run:
           name: Print Job Complete
           command: echo "Job completed successfully! Image pushed to $AWS_ECR_ACCOUNT_URL/$IMAGE_NAME:$IMAGE_TAG"
