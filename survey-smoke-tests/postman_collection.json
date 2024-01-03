@@ -1,0 +1,43 @@
+{
+  "info": {
+    "_postman_id": "9f7a9aca-9d5f-4476-a880-7f54f0b90db8",
+    "name": "Smoke Testing Survey",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "http://localhost:3000",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "610932c7-a594-4e00-9278-217b97bcc904",
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": [""]
+        },
+        "description": "Survey default response"
+      },
+      "response": []
+    }
+  ]
+}
